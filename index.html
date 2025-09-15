@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The One Source IT Solutions - Refurbished Laptops Made Simple</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <img src="logo.jpg" alt="The One Source IT Solutions" class="logo-image">
+                    <h2>The One Source IT Solutions</h2>
+                </div>
+                <nav class="header__nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#buy" class="nav-link">Buy</a>
+                    <a href="#sell" class="nav-link">Sell</a>
+                    <a href="#accessories" class="nav-link">Accessories</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button id="cartBtn" class="btn btn--outline">
+                        🛒 Cart (<span id="cartCount">0</span>)
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section section--home">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="container">
+                    <h1 class="hero__title">Buy Smart, Sell Smart</h1>
+                    <div class="hero__subtitle">Refurbished Laptops Made Simple</div>
+                    <p class="hero__description">
+                        Get premium quality refurbished laptops or unlock the value of your current laptop 
+                        with The One Source IT Solutions.
+                    </p>
+
+                    <!-- Search Container -->
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Search laptops by brand, model, or specs...">
+                            <button class="search-btn">🔍</button>
+                        </div>
+                        <div class="search-suggestions" id="searchSuggestions"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Cards -->
+            <div class="container">
+                <div class="action-cards">
+                    <div class="action-card" data-section="buy">
+                        <div class="action-card__icon">🛒</div>
+                        <h3>Purchase Quality Refurbished Laptops</h3>
+                        <p>Get trusted, quality and laptop with our hassle-free process.</p>
+                        <ul>
+                            <li>✅ 15 point quality checks</li>
+                            <li>✅ 12 months warranty</li>
+                            <li>✅ 15 days replacement</li>
+                        </ul>
+                        <button class="btn btn--primary">Browse Laptops</button>
+                    </div>
+
+                    <div class="action-card" data-section="sell">
+                        <div class="action-card__icon">💰</div>
+                        <h3>Sell Your Laptop for Best Price</h3>
+                        <p>Get trusted quality and laptop with our hassle-free selling process.</p>
+                        <ul>
+                            <li>✅ Free doorstep pickup</li>
+                            <li>✅ Instant payment</li>
+                            <li>✅ Best market prices</li>
+                        </ul>
+                        <button class="btn btn--primary">Sell Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Laptops -->
+            <div class="container">
+                <h2 class="section__title">Featured Laptops</h2>
+                <div class="featured-grid" id="featuredLaptops">
+                    <!-- Dynamic content loaded by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Trust Section -->
+            <div class="trust-section">
+                <div class="container">
+                    <div class="trust-grid">
+                        <div class="trust-item">
+                            <div class="trust-icon">🔒</div>
+                            <h4>100% quality checked and worry-free</h4>
+                            <p>Each laptop undergoes our rigorous 15-point quality inspection.</p>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">📦</div>
+                            <h4>Professional trading with fast on-time delivery</h4>
+                            <p>Fast, reliable shipping with professional packaging and tracking.</p>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">💳</div>
+                            <h4>Full refund warranty with reliable warranty services</h4>
+                            <p>15-day return policy and 12-month comprehensive warranty coverage.</p>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">🔧</div>
+                            <h4>Professional laptop experts</h4>
+                            <p>Expert technical support and guidance throughout your journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="container">
+                <h2 class="section__title">What Our Customers Say</h2>
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <p>"The refurbished laptop I purchased was like brand new. Excellent quality and great customer service throughout the process."</p>
+                        <div class="testimonial__author">- Raj Kumar, Delhi</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"I was impressed by the quick pickup service and the fair quote I received for my old laptop. Highly recommended!"</p>
+                        <div class="testimonial__author">- Priya Singh, Mumbai</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Professional service and high-quality refurbished laptops. The 12-month warranty gave me complete peace of mind."</p>
+                        <div class="testimonial__author">- Anil Patel, Bangalore</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buy Section -->
+        <section id="buy" class="section" style="display: none;">
+            <div class="container">
+                <h2 class="section__title">Buy Refurbished Laptops</h2>
+                <p class="section__description">
+                    Discover our curated collection of premium refurbished laptops, 
+                    each thoroughly tested and certified for quality.
+                </p>
+
+                <div class="buy-layout">
+                    <div class="filters">
+                        <h3>Filters</h3>
+
+                        <div class="filter-group">
+                            <h4>Brand</h4>
+                            <div class="filter-options">
+                                <label><input type="checkbox" name="brand" value="Dell"> Dell</label>
+                                <label><input type="checkbox" name="brand" value="HP"> HP</label>
+                                <label><input type="checkbox" name="brand" value="Lenovo"> Lenovo</label>
+                                <label><input type="checkbox" name="brand" value="Apple"> Apple</label>
+                                <label><input type="checkbox" name="brand" value="ASUS"> ASUS</label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>RAM</h4>
+                            <div class="filter-options">
+                                <label><input type="checkbox" name="ram" value="4GB"> 4GB</label>
+                                <label><input type="checkbox" name="ram" value="8GB"> 8GB</label>
+                                <label><input type="checkbox" name="ram" value="16GB"> 16GB</label>
+                                <label><input type="checkbox" name="ram" value="32GB"> 32GB</label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <select id="priceRange" class="form-control">
+                                <option value="all">All Prices</option>
+                                <option value="under-25000">Under ₹25,000</option>
+                                <option value="25000-50000">₹25,000 - ₹50,000</option>
+                                <option value="50000-75000">₹50,000 - ₹75,000</option>
+                                <option value="above-75000">Above ₹75,000</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Sort By</h4>
+                            <select id="sortBy" class="form-control">
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="brand">Brand A-Z</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-section">
+                        <div class="products-header">
+                            <div class="results-info">
+                                <span id="resultsCount">6 laptops found</span>
+                            </div>
+                        </div>
+                        <div class="products-grid" id="productsGrid">
+                            <!-- Dynamic content loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sell Section -->
+        <section id="sell" class="section" style="display: none;">
+            <div class="container">
+                <h2 class="section__title">Sell Your Laptop</h2>
+                <p class="section__description">
+                    Get the best value for your laptop with our simple, transparent process.
+                </p>
+
+                <div class="sell-process">
+                    <div class="process-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Select Device</div>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Condition Check</div>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Get Quote</div>
+                        </div>
+                        <div class="step" data-step="4">
+                            <div class="step-number">4</div>
+                            <div class="step-title">Schedule Pickup</div>
+                        </div>
+                    </div>
+
+                    <div class="sell-form">
+                        <!-- Step 1: Device Selection -->
+                        <div class="form-step active" data-step="1">
+                            <h3>Tell us about your laptop</h3>
+                            <div class="form-group">
+                                <label>Brand</label>
+                                <select id="sellBrand" class="form-control" required>
+                                    <option value="">Select Brand</option>
+                                    <option value="Apple">Apple</option>
+                                    <option value="Dell">Dell</option>
+                                    <option value="HP">HP</option>
+                                    <option value="Lenovo">Lenovo</option>
+                                    <option value="ASUS">ASUS</option>
+                                    <option value="Acer">Acer</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Model (e.g., Latitude 7480, EliteBook 840)</label>
+                                <input type="text" id="sellModel" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Age of Device</label>
+                                <select id="sellAge" class="form-control" required>
+                                    <option value="">Select Age</option>
+                                    <option value="less-than-1">Less than 1 year</option>
+                                    <option value="1-2">1-2 years</option>
+                                    <option value="2-3">2-3 years</option>
+                                    <option value="3-5">3-5 years</option>
+                                    <option value="more-than-5">More than 5 years</option>
+                                </select>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn--primary" onclick="nextStep(2)">Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Condition Assessment -->
+                        <div class="form-step" data-step="2">
+                            <h3>Condition Assessment</h3>
+                            <div class="condition-questions">
+                                <div class="question">
+                                    <label>Physical Condition</label>
+                                    <div class="radio-group">
+                                        <label><input type="radio" name="physical" value="excellent"> Excellent - No visible wear</label>
+                                        <label><input type="radio" name="physical" value="good"> Good - Minor wear</label>
+                                        <label><input type="radio" name="physical" value="fair"> Fair - Noticeable wear</label>
+                                    </div>
+                                </div>
+
+                                <div class="question">
+                                    <label>Screen Condition</label>
+                                    <div class="radio-group">
+                                        <label><input type="radio" name="screen" value="perfect"> Perfect - No issues</label>
+                                        <label><input type="radio" name="screen" value="minor"> Minor scratches</label>
+                                        <label><input type="radio" name="screen" value="major"> Major scratches/damage</label>
+                                    </div>
+                                </div>
+
+                                <div class="question">
+                                    <label>Performance Issues</label>
+                                    <div class="radio-group">
+                                        <label><input type="radio" name="performance" value="excellent"> Excellent - Works perfectly</label>
+                                        <label><input type="radio" name="performance" value="good"> Good - Minor issues</label>
+                                        <label><input type="radio" name="performance" value="poor"> Poor - Major issues</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn--secondary" onclick="prevStep(1)">Previous</button>
+                                <button type="button" class="btn btn--primary" onclick="nextStep(3)">Get Quote</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Quote Display -->
+                        <div class="form-step" data-step="3">
+                            <div class="quote-result">
+                                <div class="quote-card">
+                                    <h3>Your Laptop Quote</h3>
+                                    <div class="quote-amount">₹25,000</div>
+                                    <p>Based on your laptop's specifications and condition</p>
+                                    <div class="quote-breakdown">
+                                        <div><span>Base Value:</span><span>₹30,000</span></div>
+                                        <div><span>Condition Adjustment:</span><span>-₹5,000</span></div>
+                                        <div class="quote-final"><span>Final Quote:</span><span>₹25,000</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn--secondary" onclick="prevStep(2)">Previous</button>
+                                <button type="button" class="btn btn--primary" onclick="nextStep(4)">Accept & Schedule Pickup</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Pickup Scheduling -->
+                        <div class="form-step" data-step="4">
+                            <h3>Schedule Free Pickup</h3>
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" id="pickupName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" id="pickupPhone" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Pickup Address</label>
+                                <textarea id="pickupAddress" class="form-control" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Preferred Date</label>
+                                <input type="date" id="pickupDate" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Preferred Time</label>
+                                <select id="pickupTime" class="form-control" required>
+                                    <option value="">Select Time</option>
+                                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                                    <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                                    <option value="evening">Evening (4 PM - 7 PM)</option>
+                                </select>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn--secondary" onclick="prevStep(3)">Previous</button>
+                                <button type="button" class="btn btn--primary" onclick="completeSell()">Schedule Pickup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessories Section -->
+        <section id="accessories" class="section" style="display: none;">
+            <div class="container">
+                <h2 class="section__title">Laptop Accessories</h2>
+                <p class="section__description">
+                    Complete your setup with our range of quality laptop accessories.
+                </p>
+
+                <div class="accessories-grid">
+                    <div class="accessory-card">
+                        <div class="accessory-image">💻</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">Laptop Stand</div>
+                            <div class="accessory-price">₹1,299</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <div class="accessory-image">🖱️</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">Wireless Mouse</div>
+                            <div class="accessory-price">₹899</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <div class="accessory-image">⌨️</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">Mechanical Keyboard</div>
+                            <div class="accessory-price">₹2,499</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <div class="accessory-image">🎒</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">Laptop Bag</div>
+                            <div class="accessory-price">₹1,799</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <div class="accessory-image">🔌</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">USB-C Hub</div>
+                            <div class="accessory-price">₹2,999</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <div class="accessory-image">🖥️</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">External Monitor</div>
+                            <div class="accessory-price">₹12,999</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Sections (Hidden by default) -->
+        <section id="warranty" class="section section--policy" style="display: none;">
+            <div class="container">
+                <div class="policy-content">
+                    <h2>Warranty Policy</h2>
+
+                    <h3>1 Year Warranty on Refurbished Laptops</h3>
+                    <p>At The One Source IT Solutions, we provide comprehensive warranty coverage on all our refurbished laptops to ensure your complete peace of mind. Our warranty program is designed to protect your investment and provide exceptional after-sales support.</p>
+
+                    <h3>Warranty Coverage</h3>
+                    <p>Our 12-month warranty covers all hardware components and ensures reliable performance:</p>
+
+                    <div class="warranty-tiers">
+                        <div class="warranty-tier">
+                            <h4>Hardware Components Covered</h4>
+                            <ul>
+                                <li><strong>Motherboard:</strong> Complete protection against component failures</li>
+                                <li><strong>Processor:</strong> CPU performance and functionality guarantee</li>
+                                <li><strong>Memory (RAM):</strong> Full coverage for memory modules</li>
+                                <li><strong>Storage:</strong> Hard disk drives and SSD protection</li>
+                                <li><strong>Display:</strong> Screen functionality and backlight coverage</li>
+                                <li><strong>Keyboard & Touchpad:</strong> Input device functionality</li>
+                                <li><strong>Audio System:</strong> Speakers and audio output</li>
+                                <li><strong>Ports & Connectivity:</strong> USB, HDMI, and other ports</li>
+                                <li><strong>Battery:</strong> Minimum 70% capacity guarantee</li>
+                                <li><strong>Charging System:</strong> Power adapter and charging port</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Warranty Terms & Conditions</h3>
+
+                    <h4>What's Covered:</h4>
+                    <ul>
+                        <li>Manufacturing defects in hardware components</li>
+                        <li>Component failures during normal usage</li>
+                        <li>Pre-installed operating system issues</li>
+                        <li>Free repair or replacement of defective parts</li>
+                        <li>Technical support via phone and email</li>
+                    </ul>
+
+                    <h4>What's Not Covered:</h4>
+                    <ul>
+                        <li>Physical damage due to accidents, drops, or spills</li>
+                        <li>Damage from misuse, abuse, or negligence</li>
+                        <li>Unauthorized repairs or modifications</li>
+                        <li>Software issues not related to pre-installed OS</li>
+                        <li>Cosmetic wear and normal aging</li>
+                        <li>Damage from power surges or electrical issues</li>
+                        <li>Loss of data or software</li>
+                    </ul>
+
+                    <h3>Warranty Claim Process</h3>
+                    <ol>
+                        <li><strong>Contact Us:</strong> Call +91-9876543210 or email warranty@theonesourceit.com</li>
+                        <li><strong>Provide Details:</strong> Share purchase order number and issue description</li>
+                        <li><strong>Initial Diagnosis:</strong> Our technical team will provide remote assistance</li>
+                        <li><strong>Service Arrangement:</strong> If repair is needed, we'll arrange pickup/drop-off</li>
+                        <li><strong>Repair/Replacement:</strong> Quick turnaround within 5-7 business days</li>
+                        <li><strong>Quality Check:</strong> Thorough testing before return</li>
+                        <li><strong>Delivery:</strong> Free return delivery to your location</li>
+                    </ol>
+
+                    <h3>Service Locations</h3>
+                    <p>We provide warranty service across India with authorized service centers in major cities:</p>
+                    <ul>
+                        <li><strong>Bangalore:</strong> Malleshwaram, Marathahalli, HSR Layout</li>
+                        <li><strong>Pan-India:</strong> Doorstep pickup and delivery service available</li>
+                    </ul>
+
+                    <h3>Extended Warranty Options</h3>
+                    <p>For additional peace of mind, we offer extended warranty plans:</p>
+                    <ul>
+                        <li><strong>18 Months:</strong> Extended coverage at special rates</li>
+                        <li><strong>24 Months:</strong> Maximum protection for premium laptops</li>
+                        <li><strong>Accidental Damage:</strong> Optional coverage for physical damage</li>
+                    </ul>
+
+                    <h3>Customer Support</h3>
+                    <p><strong>Warranty Helpline:</strong> +91-9876543210</p>
+                    <p><strong>Email:</strong> warranty@theonesourceit.com</p>
+                    <p><strong>Support Hours:</strong> Monday to Saturday, 9:00 AM to 7:00 PM</p>
+                    <p><strong>Emergency Support:</strong> Available for critical business users</p>
+
+                    <h3>Important Notes</h3>
+                    <ul>
+                        <li>Warranty starts from the date of delivery</li>
+                        <li>Original purchase invoice required for all warranty claims</li>
+                        <li>Warranty is non-transferable and valid for original purchaser only</li>
+                        <li>Regular software updates recommended for optimal performance</li>
+                        <li>Warranty void if security seals are tampered with</li>
+                    </ul>
+
+                    <p><em>This warranty is in addition to your statutory rights and does not affect your consumer protection under applicable laws.</em></p>
+
+                    <div class="text-center">
+                        <button onclick="goBackToHome()" class="btn btn--primary">← Back to Home</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="returns" class="section section--policy" style="display: none;">
+            <div class="container">
+                <div class="policy-content">
+                    <h2>Returns Policy</h2>
+
+                    <h3>15-Day Hassle-Free Returns</h3>
+                    <p>We want you to be completely satisfied with your purchase. If you're not happy with your refurbished laptop, you can return it within 15 days of delivery for a full refund.</p>
+
+                    <h3>Return Eligibility</h3>
+                    <ul>
+                        <li>Item must be returned within 15 days of delivery</li>
+                        <li>Laptop must be in original condition with all accessories</li>
+                        <li>Original packaging and documentation required</li>
+                        <li>No physical damage or modifications</li>
+                        <li>Return authorization must be obtained first</li>
+                    </ul>
+
+                    <h3>Return Process</h3>
+                    <ol>
+                        <li>Contact us at returns@theonesourceit.com or call +91-9876543210</li>
+                        <li>Provide your order number and reason for return</li>
+                        <li>Receive return authorization and instructions</li>
+                        <li>Pack the item securely with all accessories</li>
+                        <li>Schedule free pickup or drop at our center</li>
+                        <li>Receive inspection confirmation and refund</li>
+                    </ol>
+
+                    <h3>Refund Timeline</h3>
+                    <ul>
+                        <li>Inspection: 1-2 business days after receipt</li>
+                        <li>Refund processing: 3-5 business days</li>
+                        <li>Bank credit: 5-7 business days</li>
+                        <li>Total timeline: 7-14 business days</li>
+                    </ul>
+
+                    <h3>Non-Returnable Items</h3>
+                    <ul>
+                        <li>Items damaged due to misuse or accidents</li>
+                        <li>Products with missing accessories or packaging</li>
+                        <li>Laptops with installed additional software</li>
+                        <li>Items returned after 15-day period</li>
+                    </ul>
+
+                    <h3>Return Shipping</h3>
+                    <p>We provide free return shipping within India for all eligible returns. International returns may incur shipping charges.</p>
+
+                    <div class="text-center">
+                        <button onclick="goBackToHome()" class="btn btn--primary">← Back to Home</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="refund" class="section section--policy" style="display: none;">
+            <div class="container">
+                <div class="policy-content">
+                    <h2>Refund Policy</h2>
+
+                    <h3>15-Day Money Back Guarantee</h3>
+                    <p>We stand behind the quality of our refurbished laptops with a comprehensive 15-day money back guarantee. If you're not completely satisfied with your purchase, we'll provide a full refund with no questions asked.</p>
+
+                    <h3>Refund Eligibility Criteria</h3>
+
+                    <h4>Eligible for Full Refund:</h4>
+                    <ul>
+                        <li>Request initiated within 15 days of delivery date</li>
+                        <li>Laptop returned in original condition with minimal usage signs</li>
+                        <li>All original accessories included (charger, documentation, etc.)</li>
+                        <li>Original packaging materials provided</li>
+                        <li>No physical damage beyond normal handling</li>
+                        <li>Return authorization obtained before shipping</li>
+                        <li>Valid purchase invoice or order confirmation</li>
+                    </ul>
+
+                    <h4>Partial Refund Conditions:</h4>
+                    <ul>
+                        <li>Minor cosmetic damage not affecting functionality</li>
+                        <li>Missing non-essential accessories (manual, CD/DVD)</li>
+                        <li>Original packaging damaged but product intact</li>
+                    </ul>
+
+                    <h4>Non-Refundable Scenarios:</h4>
+                    <ul>
+                        <li>Physical damage due to drops, spills, or misuse</li>
+                        <li>Modifications or unauthorized repairs attempted</li>
+                        <li>Software installations that alter system performance</li>
+                        <li>Return request initiated after 15-day period</li>
+                        <li>Products purchased during special clearance sales</li>
+                    </ul>
+
+                    <h3>Step-by-Step Refund Process</h3>
+                    <ol>
+                        <li><strong>Initiate Request:</strong> Contact us at +91-9876543210 or refunds@theonesourceit.com</li>
+                        <li><strong>Provide Information:</strong> Order number, reason for return, and condition details</li>
+                        <li><strong>Return Authorization:</strong> Receive RMA number and return shipping label</li>
+                        <li><strong>Package Securely:</strong> Use original packaging and include all accessories</li>
+                        <li><strong>Schedule Pickup:</strong> Free pickup from your location within 1-2 business days</li>
+                        <li><strong>Quality Inspection:</strong> Our team evaluates the returned product</li>
+                        <li><strong>Refund Processing:</strong> Approved refunds processed within 24-48 hours</li>
+                        <li><strong>Payment Credit:</strong> Refund reflects in your account within 5-7 business days</li>
+                    </ol>
+
+                    <h3>Refund Processing Timeline</h3>
+                    <div class="warranty-tiers">
+                        <div class="warranty-tier">
+                            <h4>Standard Timeline</h4>
+                            <ul>
+                                <li><strong>Pickup Scheduling:</strong> Within 24 hours of request</li>
+                                <li><strong>Product Pickup:</strong> 1-2 business days</li>
+                                <li><strong>Quality Inspection:</strong> 1-2 business days after receipt</li>
+                                <li><strong>Refund Approval:</strong> Same day after inspection</li>
+                                <li><strong>Refund Processing:</strong> 1-2 business days</li>
+                                <li><strong>Bank Credit:</strong> 3-7 business days (varies by bank)</li>
+                                <li><strong>Total Timeline:</strong> 7-14 business days maximum</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Refund Methods</h3>
+
+                    <h4>Payment Method Matching:</h4>
+                    <ul>
+                        <li><strong>Credit/Debit Cards:</strong> Refunded to original card (5-7 business days)</li>
+                        <li><strong>UPI Payments:</strong> Direct bank transfer (3-5 business days)</li>
+                        <li><strong>Net Banking:</strong> Account credit (3-5 business days)</li>
+                        <li><strong>Cash Payments:</strong> Bank transfer to provided account</li>
+                        <li><strong>EMI Purchases:</strong> Processed through original lending partner</li>
+                    </ul>
+
+                    <h4>Alternative Refund Options:</h4>
+                    <ul>
+                        <li><strong>Store Credit:</strong> Immediate credit for future purchases (110% value)</li>
+                        <li><strong>Exchange:</strong> Direct exchange for different model (value adjustment)</li>
+                        <li><strong>Account Transfer:</strong> Direct bank transfer option available</li>
+                    </ul>
+
+                    <h3>Return Shipping & Logistics</h3>
+
+                    <h4>Free Return Service:</h4>
+                    <ul>
+                        <li>Complimentary pickup service across India</li>
+                        <li>Professional packaging support if needed</li>
+                        <li>Real-time tracking for return shipments</li>
+                        <li>Insurance coverage during transit</li>
+                        <li>Same-day pickup in Bangalore, Delhi, Mumbai</li>
+                    </ul>
+
+                    <h4>Return Packaging Guidelines:</h4>
+                    <ul>
+                        <li>Use original box and protective materials when possible</li>
+                        <li>Secure all loose accessories in separate compartments</li>
+                        <li>Include power adapter, cables, and documentation</li>
+                        <li>Avoid tape directly on laptop surface</li>
+                        <li>Our team can assist with professional packaging if needed</li>
+                    </ul>
+
+                    <h3>Quality Inspection Process</h3>
+                    <p>Upon receiving your return, our certified technicians conduct a comprehensive inspection:</p>
+                    <ul>
+                        <li><strong>Physical Condition:</strong> External and internal damage assessment</li>
+                        <li><strong>Functional Testing:</strong> Hardware and software functionality check</li>
+                        <li><strong>Accessory Verification:</strong> Completeness of included items</li>
+                        <li><strong>Usage Analysis:</strong> Software and hardware usage patterns</li>
+                        <li><strong>Documentation Review:</strong> Warranty and purchase verification</li>
+                    </ul>
+
+                    <h3>Special Circumstances</h3>
+
+                    <h4>Defective Products:</h4>
+                    <ul>
+                        <li>Immediate full refund for manufacturing defects</li>
+                        <li>Extended return period up to 30 days for warranty issues</li>
+                        <li>Premium support with dedicated technician assistance</li>
+                        <li>Express refund processing within 3-5 business days</li>
+                    </ul>
+
+                    <h4>Customer Satisfaction Issues:</h4>
+                    <ul>
+                        <li>Performance below expectations: Full refund eligible</li>
+                        <li>Specification mismatch: Immediate resolution provided</li>
+                        <li>Customer service concerns: Additional compensation considered</li>
+                    </ul>
+
+                    <h3>Cancellation Policy</h3>
+
+                    <h4>Pre-Shipment Cancellation:</h4>
+                    <ul>
+                        <li>Free cancellation before order dispatch</li>
+                        <li>Immediate refund processing within 24-48 hours</li>
+                        <li>No cancellation fees or penalties</li>
+                    </ul>
+
+                    <h4>Post-Shipment Cancellation:</h4>
+                    <ul>
+                        <li>Standard return policy applies</li>
+                        <li>Products must be refused at delivery or returned unused</li>
+                        <li>Full refund applicable minus return shipping (if applicable)</li>
+                    </ul>
+
+                    <h3>International Returns</h3>
+                    <p>For international customers:</p>
+                    <ul>
+                        <li>Return shipping costs may apply based on location</li>
+                        <li>Customs and duty charges responsibility of customer</li>
+                        <li>Extended processing time due to international logistics</li>
+                        <li>Currency conversion at prevailing exchange rates</li>
+                    </ul>
+
+                    <h3>Customer Support for Refunds</h3>
+                    <p><strong>Dedicated Refund Helpline:</strong> +91-9876543210</p>
+                    <p><strong>Email Support:</strong> refunds@theonesourceit.com</p>
+                    <p><strong>Live Chat:</strong> Available during business hours</p>
+                    <p><strong>WhatsApp Support:</strong> +91-9876543210</p>
+                    <p><strong>Support Hours:</strong> Monday to Saturday, 9:00 AM to 7:00 PM</p>
+
+                    <h3>Important Notes</h3>
+                    <ul>
+                        <li>Refund policies may vary during special promotional periods</li>
+                        <li>Original purchase invoice required for all refund claims</li>
+                        <li>Refund eligibility determined after quality inspection</li>
+                        <li>Bank processing times vary and are beyond our control</li>
+                        <li>Partial refunds calculated based on product condition assessment</li>
+                        <li>This policy complements your statutory consumer rights</li>
+                    </ul>
+
+                    <p><em>We reserve the right to update this refund policy. Customers will be notified of significant changes via email or website notification.</em></p>
+
+                    <div class="text-center">
+                        <button onclick="goBackToHome()" class="btn btn--primary">← Back to Home</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section section--policy" style="display: none;">
+            <div class="container">
+                <div class="faq-content">
+                    <h2>Frequently Asked Questions</h2>
+
+                    <div class="faq-item">
+                        <h4>What is a refurbished laptop?</h4>
+                        <p>A refurbished laptop is a pre-owned device that has been professionally restored to like-new condition. Each laptop undergoes comprehensive testing, cleaning, component replacement (if needed), and quality certification before being offered for sale.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>What is your quality assurance process?</h4>
+                        <p>Every laptop goes through our rigorous 15-point inspection process including hardware diagnostics, performance testing, cosmetic evaluation, battery health check, and comprehensive software testing. Only devices meeting our strict quality standards are certified for sale.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>What warranty do you provide?</h4>
+                        <p>All refurbished laptops come with a comprehensive 12-month warranty covering all hardware components, including motherboard, processor, RAM, storage, display, and battery. We also provide 15 days return policy for complete satisfaction.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How do I sell my laptop to you?</h4>
+                        <p>Our selling process is simple: (1) Provide your laptop details online, (2) Answer condition assessment questions, (3) Receive instant quote, (4) Schedule free pickup. We handle evaluation, payment processing, and provide instant payment upon verification.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How quickly do you process payments for sold laptops?</h4>
+                        <p>Payments are processed within 24 hours of laptop verification at our facility. We offer multiple payment options including bank transfer, UPI, and cash payment during pickup. You'll receive payment confirmation via SMS and email.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Do you provide free pickup and delivery?</h4>
+                        <p>Yes! We offer completely free doorstep pickup for laptop sales and free delivery for purchases within Bangalore and major Indian cities. For remote locations, nominal shipping charges may apply, which will be clearly communicated upfront.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I upgrade RAM or storage after purchase?</h4>
+                        <p>Many of our laptops support hardware upgrades. We provide upgrade services for RAM, storage (SSD/HDD), and other compatible components. Contact our technical team at +91-9876543210 for compatibility check and upgrade pricing.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>What if I'm not satisfied with my purchase?</h4>
+                        <p>We offer a 15-day no-questions-asked return policy. If you're not completely satisfied, return the laptop in original condition with all accessories and packaging for a full refund. Return pickup is completely free.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>What operating system comes with the laptops?</h4>
+                        <p>All laptops come with genuine Windows 10/11 or Linux (Ubuntu) pre-installed and activated. We provide original OS installation media and license documentation. macOS is available on Apple laptops only.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Do you offer EMI options?</h4>
+                        <p>Yes, we offer flexible EMI options through leading banks and financial partners. EMI plans start from 6 months to 24 months with competitive interest rates. Zero down payment options available for select customers.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>What about data security on returned laptops?</h4>
+                        <p>We follow strict data sanitization protocols. All storage devices undergo multiple-pass data wiping using military-grade software to ensure complete data destruction. Your privacy and data security are our top priorities.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I exchange my current laptop for a different model?</h4>
+                        <p>Yes! We offer laptop exchange services. Get your current laptop evaluated, receive instant quote, and apply the value toward purchasing a different model from our inventory. Exchange value is adjusted against the new laptop price.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>What accessories are included with the laptop?</h4>
+                        <p>Each laptop comes with original or compatible power adapter, battery, and basic documentation. Original accessories like bags, mice, or additional software depend on the specific model and will be clearly mentioned in the product description.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How do I track my order?</h4>
+                        <p>Once your order is confirmed, you'll receive tracking information via SMS and email. You can track your shipment in real-time using the provided tracking number. Our customer service team is also available for status updates.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>What is your customer support availability?</h4>
+                        <p><strong>Phone:</strong> +91-9876543210<br>
+                        <strong>Email:</strong> support@theonesourceit.com<br>
+                        <strong>Hours:</strong> Monday to Saturday, 9:00 AM to 7:00 PM<br>
+                        <strong>Emergency:</strong> Critical issues supported 24/7</p>
+                    </div>
+
+                    <div class="text-center">
+                        <button onclick="goBackToHome()" class="btn btn--primary">← Back to Home</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="terms" class="section section--policy" style="display: none;">
+            <div class="container">
+                <div class="policy-content">
+                    <h2>Terms of Service</h2>
+
+                    <h3>Agreement to Terms</h3>
+                    <p>By accessing and using The One Source IT Solutions services, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p>
+
+                    <h3>Services Description</h3>
+                    <p>We provide a marketplace for buying and selling refurbished laptops, including quality assessment, refurbishment, warranty services, and customer support.</p>
+
+                    <h3>User Responsibilities</h3>
+                    <ul>
+                        <li>Provide accurate information about laptop condition when selling</li>
+                        <li>Handle purchased devices with reasonable care</li>
+                        <li>Report any issues within specified warranty periods</li>
+                        <li>Comply with all applicable laws and regulations</li>
+                    </ul>
+
+                    <h3>Pricing and Payment</h3>
+                    <ul>
+                        <li>All prices are in Indian Rupees (INR) and include applicable taxes</li>
+                        <li>Payment is required before product delivery</li>
+                        <li>We reserve the right to modify prices without prior notice</li>
+                        <li>Promotional offers are subject to terms and conditions</li>
+                    </ul>
+
+                    <h3>Limitation of Liability</h3>
+                    <p>Our liability is limited to the purchase price of the product. We are not responsible for indirect, consequential, or incidental damages.</p>
+
+                    <h3>Privacy and Data Protection</h3>
+                    <p>We are committed to protecting your privacy. Please review our Privacy Policy for information about data collection and usage.</p>
+
+                    <h3>Modifications to Terms</h3>
+                    <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting on our website.</p>
+
+                    <h3>Contact Information</h3>
+                    <p>For questions about these terms, contact us at legal@theonesourceit.com or +91-9876543210.</p>
+
+                    <div class="text-center">
+                        <button onclick="goBackToHome()" class="btn btn--primary">← Back to Home</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="privacy" class="section section--policy" style="display: none;">
+            <div class="container">
+                <div class="policy-content">
+                    <h2>Privacy Policy</h2>
+
+                    <h3>Information We Collect</h3>
+                    <p>We collect information to provide better services to our customers:</p>
+                    <ul>
+                        <li>Personal information (name, email, phone, address)</li>
+                        <li>Device information (laptop specifications, condition, photos)</li>
+                        <li>Transaction data (purchase history, payment information)</li>
+                        <li>Technical data (IP address, browser type, usage patterns)</li>
+                    </ul>
+
+                    <h3>How We Use Information</h3>
+                    <ul>
+                        <li>Process transactions and provide services</li>
+                        <li>Communicate about orders, support, and updates</li>
+                        <li>Improve our services and customer experience</li>
+                        <li>Comply with legal requirements and prevent fraud</li>
+                    </ul>
+
+                    <h3>Information Sharing</h3>
+                    <p>We do not sell or rent your personal information. We may share information with:</p>
+                    <ul>
+                        <li>Service providers (payment processors, shipping companies)</li>
+                        <li>Legal authorities when required by law</li>
+                        <li>Business partners for service improvement</li>
+                    </ul>
+
+                    <h3>Data Security</h3>
+                    <p>We implement appropriate security measures to protect your information:</p>
+                    <ul>
+                        <li>Encrypted data transmission and storage</li>
+                        <li>Regular security audits and updates</li>
+                        <li>Limited access to personal information</li>
+                        <li>Secure payment processing systems</li>
+                    </ul>
+
+                    <h3>Your Rights</h3>
+                    <ul>
+                        <li>Access and update your personal information</li>
+                        <li>Request deletion of your data</li>
+                        <li>Opt-out of marketing communications</li>
+                        <li>Data portability and correction rights</li>
+                    </ul>
+
+                    <h3>Cookies and Tracking</h3>
+                    <p>We use cookies to enhance your experience and analyze website usage. You can control cookie preferences through your browser settings.</p>
+
+                    <h3>Contact Us</h3>
+                    <p>For privacy-related questions, contact us at privacy@theonesourceit.com or +91-9876543210.</p>
+
+                    <div class="text-center">
+                        <button onclick="goBackToHome()" class="btn btn--primary">← Back to Home</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" style="display: none;">
+            <div class="container">
+                <h2 class="section__title">Contact Us</h2>
+                <p class="section__description">
+                    Get in touch with our expert team for any questions or support needs.
+                </p>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h4>Customer Support</h4>
+                            <p>📞 +91-9876543210</p>
+                            <p>📧 support@theonesourceit.com</p>
+                            <p>🕒 Monday-Saturday: 9 AM - 7 PM</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>Sales Inquiries</h4>
+                            <p>📞 +91-9876543211</p>
+                            <p>📧 sales@theonesourceit.com</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>Technical Support</h4>
+                            <p>📞 +91-9876543212</p>
+                            <p>📧 tech@theonesourceit.com</p>
+                        </div>
+
+                        <div class="contact-item locations">
+                            <h4>Our Locations</h4>
+                            <p><a href="https://maps.google.com/?q=Malleshwaram+Bangalore" target="_blank">Malleshwaram</a></p>
+                            <p><a href="https://maps.google.com/?q=Marathahalli+Bangalore" target="_blank">Marathahalli</a></p>
+                            <p><a href="https://maps.google.com/?q=HSR+Layout+Bangalore" target="_blank">HSR Layout</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Subject</label>
+                                <select class="form-control" required>
+                                    <option value="">Select Subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="sales">Sales Question</option>
+                                    <option value="warranty">Warranty Claim</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea class="form-control" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo-section">
+                        <img src="logo.jpg" alt="The One Source IT Solutions" class="footer-logo">
+                        <h4>The One Source IT Solutions</h4>
+                    </div>
+                    <p>Premium Quality Refurbished Electronics</p>
+                    <p>Your trusted partner for quality refurbished laptops with comprehensive warranty and professional service.</p>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#buy" class="nav-link">Buy Laptops</a></li>
+                        <li><a href="#sell" class="nav-link">Sell Laptop</a></li>
+                        <li><a href="#accessories" class="nav-link">Accessories</a></li>
+                        <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="#warranty">Warranty Policy</a></li>
+                        <li><a href="#returns">Returns Policy</a></li>
+                        <li><a href="#refund">Refund Policy</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📞 +91-9876543210</li>
+                        <li>📧 support@theonesourceit.com</li>
+                        <li>🕒 Mon-Sat: 9 AM - 7 PM</li>
+                        <li>📍 Bangalore, India</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© 2025 The One Source IT Solutions. All rights reserved. | 
+                   Made with ❤️ by <a href="https://rajmohanacharya.github.io" target="_blank">RajMohanAcharya</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cartItems">
+                <!-- Dynamic content loaded by JavaScript -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    Total: ₹<span id="cartTotal">0</span>
+                </div>
+                <button class="btn btn--primary">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="productDetail">
+                <!-- Dynamic content loaded by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
