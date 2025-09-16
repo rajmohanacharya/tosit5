@@ -2221,3 +2221,13 @@ select:focus {
  margin: 10% auto;
  }
 }
+.footer a {
+  color: #2563eb; /* Replace with your preferred color */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #174ea6; /* Slightly darker on hover */
+}
