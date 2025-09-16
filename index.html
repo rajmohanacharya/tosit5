@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The One Source IT Solutions - Refurbished Laptops Made Simple</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="logo.jpg" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <img src="logo.jpg" alt="The One Source IT Solutions" class="logo-image" />
+                    <h2>The One Source IT Solutions</h2>
+                </div>
+                <nav class="header__nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#buy" class="nav-link">Buy</a>
+                    <a href="#sell" class="nav-link">Sell</a>
+                    <a href="#accessories" class="nav-link">Accessories</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button id="cartBtn" class="btn btn--outline">
+                        🛒 Cart (<span id="cartCount">0</span>)
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section section--home">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="container">
+                    <!-- Removed the following lines as requested:
+                    <h1 class="hero__title">Buy Smart, Sell Smart</h1>
+                    <div class="hero__subtitle">Refurbished Laptops Made Simple</div>
+                    -->
+                    <p class="hero__description">
+                        Get premium quality refurbished laptops or unlock the value of your current laptop 
+                        with The One Source IT Solutions.
+                    </p>
+
+                    <!-- Search Container -->
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Search laptops by brand, model, or specs..."
+                            />
+                            <button class="search-btn">🔍</button>
+                        </div>
+                        <div class="search-suggestions" id="searchSuggestions"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Cards -->
+            <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
+                <div class="action-cards">
+                    <div class="action-card" data-section="buy">
+                        <div class="action-card__icon">🛒</div>
+                        <h3>Purchase Quality Refurbished Laptops</h3>
+                        <p>Get trusted, quality and laptop with our hassle-free process.</p>
+                        <!-- Removed bullet list for cleaner appearance -->
+                        <button class="btn btn--primary">Browse Laptops</button>
+                    </div>
+
+                    <div class="action-card" data-section="sell">
+                        <div class="action-card__icon">💰</div>
+                        <h3>Sell Your Laptop for Best Price</h3>
+                        <p>Get trusted quality and laptop with our hassle-free selling process.</p>
+                        <!-- Removed bullet list for cleaner appearance -->
+                        <button class="btn btn--primary">Sell Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Laptops -->
+            <div class="container">
+                <h2 class="section__title">Featured Laptops</h2>
+                <div class="featured-grid" id="featuredLaptops">
+                    <!-- Dynamic content loaded by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Trust Section -->
+            <div class="trust-section">
+                <div class="container">
+                    <div class="trust-grid">
+                        <div class="trust-item">
+                            <div class="trust-icon">🔒</div>
+                            <h4>100% quality checked and worry-free</h4>
+                            <p>Each laptop undergoes our rigorous 15-point quality inspection.</p>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">📦</div>
+                            <h4>Professional trading with fast on-time delivery</h4>
+                            <p>Fast, reliable shipping with professional packaging and tracking.</p>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">💳</div>
+                            <h4>Full refund warranty with reliable warranty services</h4>
+                            <p>15-day return policy and 12-month comprehensive warranty coverage.</p>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">🔧</div>
+                            <h4>Professional laptop experts</h4>
+                            <p>Expert technical support and guidance throughout your journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="container">
+                <h2 class="section__title">What Our Customers Say</h2>
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <p>"The refurbished laptop I purchased was like brand new. Excellent quality and great customer service throughout the process."</p>
+                        <div class="testimonial__author">- Raj Kumar, Delhi</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"I was impressed by the quick pickup service and the fair quote I received for my old laptop. Highly recommended!"</p>
+                        <div class="testimonial__author">- Priya Singh, Mumbai</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Professional service and high-quality refurbished laptops. The 12-month warranty gave me complete peace of mind."</p>
+                        <div class="testimonial__author">- Anil Patel, Bangalore</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buy Section -->
+        <section id="buy" class="section" style="display: none;">
+            <div class="container">
+                <h2 class="section__title">Buy Refurbished Laptops</h2>
+                <p class="section__description">
+                    Discover our curated collection of premium refurbished laptops, 
+                    each thoroughly tested and certified for quality.
+                </p>
+
+                <div class="buy-layout">
+                    <div class="filters">
+                        <h3>Filters</h3>
+
+                        <div class="filter-group">
+                            <h4>Brand</h4>
+                            <div class="filter-options">
+                                <label><input type="checkbox" name="brand" value="Dell" /> Dell</label>
+                                <label><input type="checkbox" name="brand" value="HP" /> HP</label>
+                                <label><input type="checkbox" name="brand" value="Lenovo" /> Lenovo</label>
+                                <label><input type="checkbox" name="brand" value="Apple" /> Apple</label>
+                                <label><input type="checkbox" name="brand" value="ASUS" /> ASUS</label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>RAM</h4>
+                            <div class="filter-options">
+                                <label><input type="checkbox" name="ram" value="4GB" /> 4GB</label>
+                                <label><input type="checkbox" name="ram" value="8GB" /> 8GB</label>
+                                <label><input type="checkbox" name="ram" value="16GB" /> 16GB</label>
+                                <label><input type="checkbox" name="ram" value="32GB" /> 32GB</label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <select id="priceRange" class="form-control">
+                                <option value="all">All Prices</option>
+                                <option value="under-25000">Under ₹25,000</option>
+                                <option value="25000-50000">₹25,000 - ₹50,000</option>
+                                <option value="50000-75000">₹50,000 - ₹75,000</option>
+                                <option value="above-75000">Above ₹75,000</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Sort By</h4>
+                            <select id="sortBy" class="form-control">
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="brand">Brand A-Z</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-section">
+                        <div class="products-header">
+                            <div class="results-info">
+                                <span id="resultsCount">6 laptops found</span>
+                            </div>
+                        </div>
+                        <div class="products-grid" id="productsGrid">
+                            <!-- Dynamic content loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sell Section -->
+        <section id="sell" class="section" style="display: none;">
+            <div class="container">
+                <h2 class="section__title">Sell Your Laptop</h2>
+                <p class="section__description">
+                    Get the best value for your laptop with our simple, transparent process.
+                </p>
+
+                <div class="sell-process">
+                    <div class="process-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Select Device</div>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Condition Check</div>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Get Quote</div>
+                        </div>
+                        <div class="step" data-step="4">
+                            <div class="step-number">4</div>
+                            <div class="step-title">Schedule Pickup</div>
+                        </div>
+                    </div>
+
+                    <div class="sell-form">
+                        <!-- Step 1: Device Selection -->
+                        <div class="form-step active" data-step="1">
+                            <h3>Tell us about your laptop</h3>
+                            <div class="form-group">
+                                <label>Brand</label>
+                                <select id="sellBrand" class="form-control" required>
+                                    <option value="">Select Brand</option>
+                                    <option value="Apple">Apple</option>
+                                    <option value="Dell">Dell</option>
+                                    <option value="HP">HP</option>
+                                    <option value="Lenovo">Lenovo</option>
+                                    <option value="ASUS">ASUS</option>
+                                    <option value="Acer">Acer</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Model (e.g., Latitude 7480, EliteBook 840)</label>
+                                <input type="text" id="sellModel" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Age of Device</label>
+                                <select id="sellAge" class="form-control" required>
+                                    <option value="">Select Age</option>
+                                    <option value="less-than-1">Less than 1 year</option>
+                                    <option value="1-2">1-2 years</option>
+                                    <option value="2-3">2-3 years</option>
+                                    <option value="3-5">3-5 years</option>
+                                    <option value="more-than-5">More than 5 years</option>
+                                </select>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn--primary" onclick="nextStep(2)">Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Condition Assessment -->
+                        <div class="form-step" data-step="2">
+                            <h3>Condition Assessment</h3>
+                            <div class="condition-questions">
+                                <div class="question">
+                                    <label>Physical Condition</label>
+                                    <div class="radio-group">
+                                        <label><input type="radio" name="physical" value="excellent" /> Excellent - No visible wear</label>
+                                        <label><input type="radio" name="physical" value="good" /> Good - Minor wear</label>
+                                        <label><input type="radio" name="physical" value="fair" /> Fair - Noticeable wear</label>
+                                    </div>
+                                </div>
+
+                                <div class="question">
+                                    <label>Screen Condition</label>
+                                    <div class="radio-group">
+                                        <label><input type="radio" name="screen" value="perfect" /> Perfect - No issues</label>
+                                        <label><input type="radio" name="screen" value="minor" /> Minor scratches</label>
+                                        <label><input type="radio" name="screen" value="major" /> Major scratches/damage</label>
+                                    </div>
+                                </div>
+
+                                <div class="question">
+                                    <label>Performance Issues</label>
+                                    <div class="radio-group">
+                                        <label><input type="radio" name="performance" value="excellent" /> Excellent - Works perfectly</label>
+                                        <label><input type="radio" name="performance" value="good" /> Good - Minor issues</label>
+                                        <label><input type="radio" name="performance" value="poor" /> Poor - Major issues</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn--secondary" onclick="prevStep(1)">Previous</button>
+                                <button type="button" class="btn btn--primary" onclick="nextStep(3)">Get Quote</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Quote Display -->
+                        <div class="form-step" data-step="3">
+                            <div class="quote-result">
+                                <div class="quote-card">
+                                    <h3>Your Laptop Quote</h3>
+                                    <div class="quote-amount">₹25,000</div>
+                                    <p>Based on your laptop's specifications and condition</p>
+                                    <div class="quote-breakdown">
+                                        <div><span>Base Value:</span><span>₹30,000</span></div>
+                                        <div><span>Condition Adjustment:</span><span>-₹5,000</span></div>
+                                        <div class="quote-final"><span>Final Quote:</span><span>₹25,000</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn--secondary" onclick="prevStep(2)">Previous</button>
+                                <button type="button" class="btn btn--primary" onclick="nextStep(4)">Accept &amp; Schedule Pickup</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Pickup Scheduling -->
+                        <div class="form-step" data-step="4">
+                            <h3>Schedule Free Pickup</h3>
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" id="pickupName" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" id="pickupPhone" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Pickup Address</label>
+                                <textarea id="pickupAddress" class="form-control" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Preferred Date</label>
+                                <input type="date" id="pickupDate" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Preferred Time</label>
+                                <select id="pickupTime" class="form-control" required>
+                                    <option value="">Select Time</option>
+                                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                                    <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                                    <option value="evening">Evening (4 PM - 7 PM)</option>
+                                </select>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn--secondary" onclick="prevStep(3)">Previous</button>
+                                <button type="button" class="btn btn--primary" onclick="completeSell()">Schedule Pickup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessories Section -->
+        <section id="accessories" class="section" style="display: none;">
+            <div class="container">
+                <h2 class="section__title">Laptop Accessories</h2>
+                <p class="section__description">
+                    Complete your setup with our range of quality laptop accessories.
+                </p>
+
+                <div class="accessories-grid">
+                    <div class="accessory-card">
+                        <div class="accessory-image">💻</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">Laptop Stand</div>
+                            <div class="accessory-price">₹1,299</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <div class="accessory-image">🖱️</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">Wireless Mouse</div>
+                            <div class="accessory-price">₹899</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <div class="accessory-image">⌨️</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">Mechanical Keyboard</div>
+                            <div class="accessory-price">₹2,499</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <div class="accessory-image">🎒</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">Laptop Bag</div>
+                            <div class="accessory-price">₹1,799</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <div class="accessory-image">🔌</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">USB-C Hub</div>
+                            <div class="accessory-price">₹2,999</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <div class="accessory-image">🖥️</div>
+                        <div class="accessory-details">
+                            <div class="accessory-name">External Monitor</div>
+                            <div class="accessory-price">₹12,999</div>
+                            <div class="accessory-actions">
+                                <button class="btn btn--outline btn--sm">View Details</button>
+                                <button class="btn btn--primary btn--sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Sections (omitted here for brevity, keep same as before) -->
+        <!-- Contact Section (omitted here for brevity, keep same as before) -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo-section">
+                        <img src="logo.jpg" alt="The One Source IT Solutions" class="footer-logo" />
+                        <h4>The One Source IT Solutions</h4>
+                    </div>
+                    <p>Premium Quality Refurbished Electronics</p>
+                    <p>Your trusted partner for quality refurbished laptops with comprehensive warranty and professional service.</p>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#buy" class="nav-link">Buy Laptops</a></li>
+                        <li><a href="#sell" class="nav-link">Sell Laptop</a></li>
+                        <li><a href="#accessories" class="nav-link">Accessories</a></li>
+                        <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="#warranty">Warranty Policy</a></li>
+                        <li><a href="#returns">Returns Policy</a></li>
+                        <li><a href="#refund">Refund Policy</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📞 +91-9876543210</li>
+                        <li>📧 support@theonesourceit.com</li>
+                        <li>🕒 Mon-Sat: 9 AM - 7 PM</li>
+                        <li>📍 Bangalore, India</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>
+                    © 2025 The One Source IT Solutions. All rights reserved. |
+                    Made with ❤️ by <a href="https://rajmohanacharya.github.io" target="_blank">RajMohanAcharya</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cartItems">
+                <!-- Dynamic content loaded by JavaScript -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    Total: ₹<span id="cartTotal">0</span>
+                </div>
+                <button class="btn btn--primary">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="productDetail">
+                <!-- Dynamic content loaded by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
