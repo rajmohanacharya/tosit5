@@ -243,7 +243,7 @@ function generatePolicyContent(type) {
         'warranty': `
             <div class="faq-item">
                 <h3>12-Month Comprehensive Warranty</h3>
-                <p>At The One Source IT Solutions, we provide comprehensive warranty coverage on all our refurbished laptops to ensure your complete peace of mind.</p>
+                <p>At The Blunder Rookie, we provide comprehensive warranty coverage on all our refurbished laptops to ensure your complete peace of mind.</p>
             </div>
             <div class="faq-item">
                 <h3>What's Covered</h3>
@@ -258,8 +258,8 @@ function generatePolicyContent(type) {
             </div>
             <div class="faq-item">
                 <h3>Warranty Support</h3>
-                <p><strong>Phone:</strong> +91-9876543210<br>
-                <strong>Email:</strong> warranty@theonesourceit.com<br>
+                <p><strong>Phone:</strong> +91-987654321<br>
+                <strong>Email:</strong> warranty@theblunderrookie.com<br>
                 <strong>Hours:</strong> Monday to Saturday, 9:00 AM to 7:00 PM</p>
             </div>
         `,
@@ -271,7 +271,7 @@ function generatePolicyContent(type) {
             <div class="faq-item">
                 <h3>Return Process</h3>
                 <ol>
-                    <li>Contact us at +91-9876543210 or refunds@theonesourceit.com</li>
+                    <li>Contact us at +91-9876543210 or refunds@theblunderrookie.com</li>
                     <li>Provide your order number and reason for return</li>
                     <li>Receive return authorization and instructions</li>
                     <li>Pack the item securely with all accessories</li>
@@ -603,3 +603,4 @@ window.updateCartQuantity = updateCartQuantity;
 window.removeFromCart = removeFromCart;
 window.goBackToHome = goBackToHome;
 console.log('Simple JavaScript loaded successfully!');
+
