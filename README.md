@@ -1,4 +1,4 @@
-# The One Source IT Solutions - Fixed Light Mode
+# E Commerce Website - Fixed Light Mode
 
 ## Changes Made
 
