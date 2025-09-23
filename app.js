@@ -324,7 +324,7 @@ function generatePolicyContent(type) {
             <h1 style="color: #212529; margin-bottom: 30px; font-size: 2.5rem;">${title[type]}</h1>
             ${content[type]}
             <p style="margin-top: 40px; text-align: center; color: #6C757D;">
-                Need help? Contact us at <strong>+91-9876543210</strong> or <strong>support@theonesourceit.com</strong>
+                Need help? Contact us at <strong>+91-987654321</strong> or <strong>support@theblunderrookie.com</strong>
             </p>
         </div>
     `;
@@ -603,4 +603,5 @@ window.updateCartQuantity = updateCartQuantity;
 window.removeFromCart = removeFromCart;
 window.goBackToHome = goBackToHome;
 console.log('Simple JavaScript loaded successfully!');
+
 
