@@ -1057,7 +1057,7 @@ ${orderData.shippingAddress.city}, ${orderData.shippingAddress.state} - ${orderD
 Please contact the customer to confirm the order and payment details.
     `;
 
-    const whatsappUrl = `https://wa.me/919986092718?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919962229914?text=${encodeURIComponent(message)}`;
 
     // In a real implementation, you might use WhatsApp Business API
     console.log('Order sent to WhatsApp:', message);
@@ -1120,7 +1120,7 @@ function showOrderConfirmation(orderData) {
 // WhatsApp Integration
 function openWhatsAppChat() {
     const message = "Hi! I'm interested in your refurbished laptops. Can you help me?";
-    const whatsappUrl = `https://wa.me/919986092718?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919962229914?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }
 
@@ -1318,7 +1318,7 @@ Age: ${formData.age}
 Please contact the customer for evaluation and quotation.
     `;
 
-    const whatsappUrl = `https://wa.me/919986092718?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919962229914?text=${encodeURIComponent(message)}`;
 
     showNotification('Your request has been submitted! We will contact you soon.');
     document.getElementById('sell-laptop-form').reset();
