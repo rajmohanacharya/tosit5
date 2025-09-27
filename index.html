@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blunder Rookie - Premium Refurbished Laptops</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="logo.jpg" alt="The Blunder Rookie" class="nav-logo">
+                <span class="brand-name">The Blunder Rookie</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#buy" class="nav-link">Buy Laptops</a>
+                <a href="#sell" class="nav-link">Sell Laptop</a>
+                <a href="#accessories" class="nav-link">Accessories</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <div class="nav-icons">
+                    <button id="user-btn" class="nav-icon-btn" title="Login/Account">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button id="cart-btn" class="nav-icon-btn" title="Shopping Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </button>
+                    <button id="whatsapp-btn" class="whatsapp-btn" title="WhatsApp Support">
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                </div>
+            </div>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Get premium quality refurbished laptops or unlock the value of your current laptop with The Blunder Rookie.</h1>
+            <div class="hero-buttons">
+                <div class="hero-button">
+                    <div class="hero-icon">🛒</div>
+                    <div class="hero-text">
+                        <h3>Purchase Quality Refurbished Laptops</h3>
+                        <p>Get trusted, quality and laptop with our hassle-free process.</p>
+                    </div>
+                </div>
+                <div class="hero-button">
+                    <div class="hero-icon">💰</div>
+                    <div class="hero-text">
+                        <h3>Sell Your Laptop for Best Price</h3>
+                        <p>Get trusted quality and laptop with our hassle-free selling process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Laptops -->
+    <section class="featured-section">
+        <div class="container">
+            <h2>Featured Laptops</h2>
+            <div id="featured-products" class="products-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔒</div>
+                    <div class="benefit-content">
+                        <h4>100% quality checked and worry-free</h4>
+                        <p>Each laptop undergoes our rigorous 15-point quality inspection.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📦</div>
+                    <div class="benefit-content">
+                        <h4>Professional trading with fast on-time delivery</h4>
+                        <p>Fast, reliable shipping with professional packaging and tracking.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💳</div>
+                    <div class="benefit-content">
+                        <h4>Full refund warranty with reliable warranty services</h4>
+                        <p>15-day return policy and 12-month comprehensive warranty coverage.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔧</div>
+                    <div class="benefit-content">
+                        <h4>Professional laptop experts</h4>
+                        <p>Expert technical support and guidance throughout your journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"The refurbished laptop I purchased was like brand new. Excellent quality and great customer service throughout the process."</p>
+                    <span>- Raj Kumar, Delhi</span>
+                </div>
+                <div class="testimonial">
+                    <p>"I was impressed by the quick pickup service and the fair quote I received for my old laptop. Highly recommended!"</p>
+                    <span>- Priya Singh, Mumbai</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Professional service and high-quality refurbished laptops. The 12-month warranty gave me complete peace of mind."</p>
+                    <span>- Anil Patel, Bangalore</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Laptops Section -->
+    <section id="buy" class="buy-section" style="display: none;">
+        <div class="container">
+            <h2>Buy Refurbished Laptops</h2>
+            <p>Discover our curated collection of premium refurbished laptops, each thoroughly tested and certified for quality.</p>
+
+            <!-- Filters -->
+            <div class="filters-section">
+                <h3>Filters</h3>
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <h4>Brand</h4>
+                        <div class="filter-options" id="brand-filter">
+                            <label><input type="checkbox" value="DELL"> DELL</label>
+                            <label><input type="checkbox" value="HP"> HP</label>
+                            <label><input type="checkbox" value="LENOVO"> LENOVO</label>
+                            <label><input type="checkbox" value="APPLE"> APPLE</label>
+                            <label><input type="checkbox" value="ASUS"> ASUS</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>RAM</h4>
+                        <div class="filter-options" id="ram-filter">
+                            <label><input type="checkbox" value="4GB"> 4GB</label>
+                            <label><input type="checkbox" value="8GB"> 8GB</label>
+                            <label><input type="checkbox" value="16GB"> 16GB</label>
+                            <label><input type="checkbox" value="32GB"> 32GB</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <select id="price-filter">
+                            <option value="">All Prices</option>
+                            <option value="0-25000">Under ₹25,000</option>
+                            <option value="25000-50000">₹25,000 - ₹50,000</option>
+                            <option value="50000-75000">₹50,000 - ₹75,000</option>
+                            <option value="75000-999999">Above ₹75,000</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Sort By</h4>
+                        <select id="sort-filter">
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="brand">Brand A-Z</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-count">
+                <span id="products-count">6 laptops found</span>
+            </div>
+            <div id="products-grid" class="products-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sell Laptop Section -->
+    <section id="sell" class="sell-section" style="display: none;">
+        <div class="container">
+            <h2>Sell Your Laptop</h2>
+            <p>Get the best value for your laptop with our simple, transparent process.</p>
+
+            <div class="sell-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Select Device</h4>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Condition Check</h4>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Get Quote</h4>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Schedule Pickup</h4>
+                </div>
+            </div>
+
+            <div class="sell-form">
+                <h3>Tell us about your laptop</h3>
+                <form id="sell-laptop-form">
+                    <div class="form-group">
+                        <label>Brand</label>
+                        <select id="sell-brand" required>
+                            <option value="">Select Brand</option>
+                            <option value="Apple">Apple</option>
+                            <option value="Dell">Dell</option>
+                            <option value="HP">HP</option>
+                            <option value="Lenovo">Lenovo</option>
+                            <option value="ASUS">ASUS</option>
+                            <option value="Acer">Acer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Model (e.g., Latitude 7480, EliteBook 840)</label>
+                        <input type="text" id="sell-model" placeholder="Enter laptop model" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Age of Device</label>
+                        <select id="sell-age" required>
+                            <option value="">Select Age</option>
+                            <option value="Less than 1 year">Less than 1 year</option>
+                            <option value="1-2 years">1-2 years</option>
+                            <option value="2-3 years">2-3 years</option>
+                            <option value="3-5 years">3-5 years</option>
+                            <option value="More than 5 years">More than 5 years</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Contact Details</label>
+                        <input type="text" id="sell-name" placeholder="Your Name" required>
+                        <input type="tel" id="sell-phone" placeholder="Phone Number" required>
+                        <input type="email" id="sell-email" placeholder="Email Address" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Get Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section id="accessories" class="accessories-section" style="display: none;">
+        <div class="container">
+            <h2>Laptop Accessories</h2>
+            <p>Complete your setup with our range of quality laptop accessories.</p>
+
+            <div id="accessories-grid" class="products-grid">
+                <!-- Accessories will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section" style="display: none;">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91-9986092718</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@theblunderrookie.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Udupi, Karnataka, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp Business</h4>
+                            <p>+91-9986092718</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="logo.jpg" alt="The Blunder Rookie" class="footer-logo">
+                        <h3>The Blunder Rookie</h3>
+                    </div>
+                    <p>Premium quality refurbished laptops with comprehensive warranty and professional support.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#buy">Buy Laptops</a></li>
+                        <li><a href="#sell">Sell Laptop</a></li>
+                        <li><a href="#accessories">Accessories</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Policies</h4>
+                    <ul class="footer-links">
+                        <li><a href="#warranty">Warranty Policy</a></li>
+                        <li><a href="#refund">Refund Policy</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@theblunderrookie.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91-9986092718</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Udupi, Karnataka, India</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 The Blunder Rookie. All rights reserved. | Made with ❤️ by Raj Mohan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Product Details Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="product-details">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="" alt="Product Image">
+                        <div class="image-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="thumbnail-images">
+                        <!-- Thumbnail images will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h2 id="modal-product-name"></h2>
+                    <div class="product-rating">
+                        <div class="stars" id="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text" id="rating-text">4.5 (127 reviews)</span>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="current-price" id="modal-current-price">₹24,999</span>
+                        <span class="original-price" id="modal-original-price">₹65,000</span>
+                        <span class="discount" id="modal-discount">62% OFF</span>
+                    </div>
+
+                    <div class="stock-info">
+                        <span id="stock-status" class="stock-status">⚠ Only 2 left</span>
+                    </div>
+
+                    <div class="specifications" id="product-specifications">
+                        <!-- Specifications will be loaded here -->
+                    </div>
+
+                    <div class="quantity-section">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-controls">
+                            <button type="button" class="quantity-btn" id="quantity-minus">-</button>
+                            <input type="number" id="quantity-input" value="1" min="1" max="10">
+                            <button type="button" class="quantity-btn" id="quantity-plus">+</button>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="add-to-cart-btn" class="btn-primary">Add to Cart</button>
+                        <button id="buy-now-btn" class="btn-secondary">Buy Now</button>
+                    </div>
+
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>12 months warranty</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-undo"></i>
+                            <span>15-day return policy</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-truck"></i>
+                            <span>Free delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-section">
+                <h3>Customer Reviews</h3>
+                <div id="reviews-container">
+                    <!-- Reviews will be loaded here -->
+                </div>
+
+                <button id="write-review-btn" class="btn-outline">Write a Review</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Total: ₹<span id="cart-total">0</span></span>
+                </div>
+                <button id="checkout-btn" class="btn-primary">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Auth Modal -->
+    <div id="user-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="auth-container">
+                <!-- Login Form -->
+                <div id="login-form" class="auth-form">
+                    <h2>Login to Your Account</h2>
+                    <form id="login-form-element">
+                        <div class="form-group">
+                            <input type="email" id="login-email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="login-password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Login</button>
+                        <p class="auth-switch">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+                    </form>
+                </div>
+
+                <!-- Register Form -->
+                <div id="register-form" class="auth-form" style="display: none;">
+                    <h2>Create New Account</h2>
+                    <form id="register-form-element">
+                        <div class="form-group">
+                            <input type="text" id="register-name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="register-email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="register-phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="register-password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="register-confirm-password" placeholder="Confirm Password" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Register</button>
+                        <p class="auth-switch">Already have an account? <a href="#" id="show-login">Login here</a></p>
+                    </form>
+                </div>
+
+                <!-- User Dashboard (when logged in) -->
+                <div id="user-dashboard" class="user-dashboard" style="display: none;">
+                    <h2>Welcome, <span id="user-name"></span>!</h2>
+                    <div class="dashboard-menu">
+                        <a href="#" id="view-orders" class="dashboard-item">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Order History</span>
+                        </a>
+                        <a href="#" id="manage-addresses" class="dashboard-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Manage Addresses</span>
+                        </a>
+                        <a href="#" id="account-settings" class="dashboard-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Account Settings</span>
+                        </a>
+                        <a href="#" id="logout" class="dashboard-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content large">
+            <span class="close">&times;</span>
+            <h2>Checkout</h2>
+            <div class="checkout-container">
+                <div class="checkout-left">
+                    <div class="checkout-section">
+                        <h3>Shipping Address</h3>
+                        <form id="checkout-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="checkout-name" placeholder="Full Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" id="checkout-phone" placeholder="Phone Number" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="checkout-email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="checkout-address" placeholder="Complete Address" rows="3" required></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="checkout-city" placeholder="City" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="checkout-state" placeholder="State" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="checkout-pincode" placeholder="PIN Code" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="checkout-section">
+                        <h3>Payment Method</h3>
+                        <div class="payment-methods">
+                            <label class="payment-method">
+                                <input type="radio" name="payment-method" value="upi" checked>
+                                <div class="payment-option">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>UPI Payment</span>
+                                </div>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment-method" value="pay-later">
+                                <div class="payment-option">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Pay Later (Confirm Order)</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-right">
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div id="checkout-items">
+                            <!-- Order items will be loaded here -->
+                        </div>
+                        <div class="order-total">
+                            <div class="total-row">
+                                <span>Subtotal:</span>
+                                <span>₹<span id="checkout-subtotal">0</span></span>
+                            </div>
+                            <div class="total-row">
+                                <span>Shipping:</span>
+                                <span class="free">FREE</span>
+                            </div>
+                            <div class="total-row total">
+                                <span>Total:</span>
+                                <span>₹<span id="checkout-total">0</span></span>
+                            </div>
+                        </div>
+                        <button id="place-order-btn" class="btn-primary">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="admin-login" class="auth-form">
+                <h2>Admin Login</h2>
+                <form id="admin-login-form">
+                    <div class="form-group">
+                        <input type="text" id="admin-username" placeholder="Admin Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="admin-password" placeholder="Admin Password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Login as Admin</button>
+                </form>
+            </div>
+
+            <!-- Admin Dashboard -->
+            <div id="admin-dashboard" class="admin-dashboard" style="display: none;">
+                <h2>Admin Dashboard</h2>
+                <div class="admin-tabs">
+                    <button class="tab-btn active" data-tab="products">Products</button>
+                    <button class="tab-btn" data-tab="orders">Orders</button>
+                    <button class="tab-btn" data-tab="customers">Customers</button>
+                </div>
+
+                <div id="products-tab" class="tab-content active">
+                    <div class="admin-section-header">
+                        <h3>Manage Products</h3>
+                        <button id="add-product-btn" class="btn-primary">Add New Product</button>
+                    </div>
+                    <div id="admin-products-list">
+                        <!-- Products management will be loaded here -->
+                    </div>
+                </div>
+
+                <div id="orders-tab" class="tab-content">
+                    <h3>Manage Orders</h3>
+                    <div id="admin-orders-list">
+                        <!-- Orders management will be loaded here -->
+                    </div>
+                </div>
+
+                <div id="customers-tab" class="tab-content">
+                    <h3>Manage Customers</h3>
+                    <div id="admin-customers-list">
+                        <!-- Customers management will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Policy Modals -->
+    <div id="warranty-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="policy-content">
+                <h2>Warranty Policy</h2>
+                <h3>12-Month Comprehensive Warranty</h3>
+                <p>At The Blunder Rookie, we provide comprehensive warranty coverage on all our refurbished laptops to ensure your complete peace of mind.</p>
+
+                <h4>What's Covered</h4>
+                <ul>
+                    <li>✅ Motherboard and all internal components</li>
+                    <li>✅ Processor and memory modules</li>
+                    <li>✅ Display and backlight system</li>
+                    <li>✅ Keyboard and touchpad</li>
+                    <li>✅ Battery (minimum 70% capacity guarantee)</li>
+                    <li>✅ All ports and connectivity features</li>
+                </ul>
+
+                <h4>Warranty Support</h4>
+                <p><strong>Phone:</strong> +91-9986092718<br>
+                <strong>Email:</strong> warranty@theblunderrookie.com<br>
+                <strong>Hours:</strong> Monday to Saturday, 9:00 AM to 7:00 PM</p>
+
+                <p>Need help? Contact us at <strong>+91-9986092718</strong> or <strong>support@theblunderrookie.com</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="refund-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="policy-content">
+                <h2>Refund Policy</h2>
+                <h3>15-Day Money Back Guarantee</h3>
+                <p>We stand behind the quality of our refurbished laptops with a comprehensive 15-day money back guarantee. If you're not completely satisfied with your purchase, we'll provide a full refund with no questions asked.</p>
+
+                <h4>Return Process</h4>
+                <ol>
+                    <li>Contact us at +91-9986092718 or refunds@theblunderrookie.com</li>
+                    <li>Provide your order number and reason for return</li>
+                    <li>Receive return authorization and instructions</li>
+                    <li>Pack the item securely with all accessories</li>
+                    <li>Schedule free pickup or drop at our center</li>
+                    <li>Receive inspection confirmation and refund</li>
+                </ol>
+
+                <h4>Refund Timeline</h4>
+                <p>Refunds are processed within 5-7 business days after we receive and inspect the returned item.</p>
+
+                <p>Need help? Contact us at <strong>+91-9986092718</strong> or <strong>support@theblunderrookie.com</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="faq-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="policy-content">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h4>What is a refurbished laptop?</h4>
+                    <p>A refurbished laptop is a pre-owned device that has been professionally restored to like-new condition. Each laptop undergoes comprehensive testing, cleaning, component replacement (if needed), and quality certification before being offered for sale.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What warranty do you provide?</h4>
+                    <p>All refurbished laptops come with a comprehensive 12-month warranty covering all hardware components, including motherboard, processor, RAM, storage, display, and battery. We also provide 15 days return policy for complete satisfaction.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How do I sell my laptop to you?</h4>
+                    <p>Our selling process is simple: (1) Provide your laptop details online, (2) Answer condition assessment questions, (3) Receive instant quote, (4) Schedule free pickup. We handle evaluation, payment processing, and provide instant payment upon verification.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Do you provide free pickup and delivery?</h4>
+                    <p>Yes! We offer completely free doorstep pickup for laptop sales and free delivery for purchases within Bangalore and major Indian cities. For remote locations, nominal shipping charges may apply.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What if I'm not satisfied with my purchase?</h4>
+                    <p>We offer a 15-day no-questions-asked return policy. If you're not completely satisfied, return the laptop in original condition with all accessories and packaging for a full refund. Return pickup is completely free.</p>
+                </div>
+
+                <p>Need help? Contact us at <strong>+91-9986092718</strong> or <strong>support@theblunderrookie.com</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Processing...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
